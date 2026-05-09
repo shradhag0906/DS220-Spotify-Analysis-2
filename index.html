@@ -7800,7 +7800,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
@@ -7836,7 +7836,7 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[1]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -8016,21 +8016,13 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>Problem Space</p>
-<p>Music streaming has changed the way songs become popular and how success is measured in the music industry. Instead of only looking at album sales or radio play, Spotify-style data allows us to study streams, playlists, chart placement, and audio features such as danceability, energy, valence, acousticness, and speechiness.</p>
-<p>My analysis seeks to determine patterns in Spotify song success by addressing the following questions:</p>
-<ol>
-<li>Which songs have the most Spotify streams?</li>
-<li>Which artists have the highest total streams?</li>
-<li>Which genres have the highest average popularity?</li>
-<li>How do streams change by year?</li>
-<li>Is playlist placement related to streams?</li>
-<li>Do audio features like danceability and energy help explain popularity?</li>
-</ol>
+<p>Music streaming changed how artists, labels, and listeners measure success. Instead of only looking at radio play or album sales, Spotify-style data lets us study streams, playlists, charts, and audio traits like energy, danceability, and valence. This project asks what popular songs tend to have in common and whether measurable audio features help explain streaming performance.</p>
+<p>The dataset contains popular Spotify songs from 2010 to 2019. It includes 41 songs and 26 original columns, including song, artist, genre, year, streams, playlist counts, chart appearances, BPM, mode, energy, danceability, valence, acousticness, speechiness, and popularity.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5a82a8e9">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=50e1d62f">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8049,23 +8041,23 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=4afb26b6">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=540cf093">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">#Analyzing the Top Songs by Spotify Streams</span>
-<span class="c1">#Using Pandas to sort the dataset by streams in millions</span>
+
 <span class="n">top_songs</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">df</span><span class="p">[[</span><span class="s1">'song'</span><span class="p">,</span> <span class="s1">'artist'</span><span class="p">,</span> <span class="s1">'year'</span><span class="p">,</span> <span class="s1">'streams_millions'</span><span class="p">,</span> <span class="s1">'popularity'</span><span class="p">]]</span>
     <span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">'streams_millions'</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
     <span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="p">)</span>
 
-<span class="c1">#Display the Pandas table</span>
+<span class="c1">#Display the table</span>
 <span class="n">display</span><span class="p">(</span><span class="n">top_songs</span><span class="p">)</span>
 
 <span class="c1">#Create a bar chart of the top streamed songs</span>
@@ -8224,7 +8216,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">#Analyzing Total Streams by Artist</span>
@@ -8379,7 +8371,7 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>Analysis of the Correlation Between Artist and Streams</p>
-<p>The graph shows that artists with multiple popular songs have an advantage because their total streams add across their catalog. This makes artist presence important when studying music streaming data. The results suggest that Spotify success is partly connected to the strength of the artist's overall catalog, not just one individual song.</p>
+<p>The graph shows that artists with multiple popular songs have an advantage because their total streams add across their catalog. Artists with multiple major hits have a clear advantage because total streams add across songs. This shows why catalogs matter in streaming.</p>
 </div>
 </div>
 </div>
@@ -8388,7 +8380,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">#Analyzing Popularity by Genre</span>
@@ -8554,7 +8546,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">#Analyzing Streams by Year</span>
@@ -8729,7 +8721,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">#Analyzing the Relationship Between Spotify Playlists and Streams</span>
@@ -8908,7 +8900,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">#Analyzing Audio Features and Popularity</span>
@@ -9189,7 +9181,18 @@ a.anchor-link {
 <p>Years: Stream totals change by year, but those totals depend on how many songs from each year are included and how successful those songs are.</p>
 <p>Playlist Placement: Songs that appear in more Spotify playlists may have stronger streaming performance because playlists increase visibility and discovery.</p>
 <p>Audio Features: Danceability and energy help describe a song's style, but they do not fully predict popularity. Overall, the data suggests that Spotify success is a combination of platform visibility, artist strength, replay value, and song characteristics.</p>
-<h2>GitHub Links</h2> <ul> <li> <a href="https://github.com/shradhag0906" target="_blank"> View My GitHub Profile </a> </li> <li> <a href="https://github.com/shradhag0906/DS220-Spotify-Analysis-2" target="_blank"> View Full GitHub Repository </a> </li> </ul>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5a93d7c0">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>In Summary, Spotify success is not explained by one feature alone. The highest-streamed songs usually combine broad pop appeal, playlist visibility, artist recognition, and strong replay value. Danceability and energy are useful traits to examine, but they do not guarantee high popularity. The strongest story from this dataset is that streaming success is a mix of audio features and platform exposure.</p> 
+<h2>GitHub Links</h2><ul><li><a href="https://github.com/shradhag0906" target="_blank">View My GitHub Profile</a></li><li><a href="https://github.com/shradhag0906/DS220-Spotify-Analysis-2" target="_blank">View Full GitHub Repository</a></li></ul>
 </div>
 </div>
 </div>
